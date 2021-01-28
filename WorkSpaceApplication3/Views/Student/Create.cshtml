@@ -1,0 +1,8 @@
+﻿@model WorkSpaceApplication2.Entities.Student
+@using (Html.BeginForm("Create", "Student",method:FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.StudentID)
+    @Html.TextBoxFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.LastName)
+    <input type="submit" value="ثبت" />
+}

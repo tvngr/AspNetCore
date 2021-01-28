@@ -1,0 +1,22 @@
+﻿@model IList<WorkSpaceApplication2.Entities.Student>
+ 
+    <table>
+        <thead>
+            <tr>
+                <td>نام</td>
+                <td>فامیل</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                    </tr>
+                }
+            }
+            </tbody>
+    </table>
+ @Html.ActionLink("new","Create","Student")
